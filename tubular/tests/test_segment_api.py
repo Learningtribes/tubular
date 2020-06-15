@@ -2,14 +2,13 @@
 Tests for the Segment API functionality
 """
 import json
+
 import mock
 import pytest
-
 import requests
 from six import text_type
 
 from tubular.segment_api import SegmentApi, BULK_DELETE_URL
-
 
 FAKE_AUTH_TOKEN = 'FakeToken'
 TEST_SEGMENT_CONFIG = {
@@ -26,6 +25,7 @@ class FakeResponse:
     """
     Fakes out requests.post response
     """
+
     def json(self):
         """
         Returns fake Segment retirement response data in the correct format

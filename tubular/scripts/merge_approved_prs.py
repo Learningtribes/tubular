@@ -3,11 +3,11 @@
 """
 Command-line script to trigger a jenkins job
 """
-from datetime import datetime
 import logging
-import sys
 import os
 import os.path
+import sys
+from datetime import datetime
 
 import click
 import click_log

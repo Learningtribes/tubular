@@ -3,11 +3,10 @@
 """
 Command-line script to clear the Varnish cache for an environment.
 """
-from __future__ import absolute_import
-from __future__ import unicode_literals
 
 import sys
 from os import path
+
 import click
 
 # Add top-level module path to sys.path before importing tubular code.
@@ -30,6 +29,7 @@ def clear_varnish_cache(env, username, password):
         password (str): The Acquia password necessary to run the command.
     """
     drupal.clear_varnish_cache(env, username, password)
+
 
 if __name__ == "__main__":
     clear_varnish_cache()  # pylint: disable=no-value-for-parameter

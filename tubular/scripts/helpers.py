@@ -7,7 +7,6 @@ Common helper methods to use in tubular scripts.
 # does NOT tolerate unicode text on sys.stdout, namely python 2 on Build
 # Jenkins.  PLAT-2287 tracks this Tech Debt.
 
-from __future__ import print_function
 
 import io
 import json
@@ -23,10 +22,10 @@ from six import text_type
 sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
 
 from tubular.edx_api import CredentialsApi, EcommerceApi, LmsApi  # pylint: disable=wrong-import-position
-from tubular.segment_api import SegmentApi   # pylint: disable=wrong-import-position
-from tubular.sailthru_api import SailthruApi   # pylint: disable=wrong-import-position
-from tubular.salesforce_api import SalesforceApi   # pylint: disable=wrong-import-position
-from tubular.hubspot_api import HubspotAPI   # pylint: disable=wrong-import-position
+from tubular.segment_api import SegmentApi  # pylint: disable=wrong-import-position
+from tubular.sailthru_api import SailthruApi  # pylint: disable=wrong-import-position
+from tubular.salesforce_api import SalesforceApi  # pylint: disable=wrong-import-position
+from tubular.hubspot_api import HubspotAPI  # pylint: disable=wrong-import-position
 
 
 def _log(kind, message):

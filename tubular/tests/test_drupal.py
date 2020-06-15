@@ -1,20 +1,19 @@
 """
 Tests of the code interacting with the Drupal API.
 """
-from __future__ import absolute_import
-from __future__ import unicode_literals
 
 import os
 import shutil
 import unittest
+
 import requests_mock
 from six.moves import reload_module
+
 import tubular.drupal as drupal
 from tubular.exception import BackendError
 
 os.environ["TUBULAR_RETRY_ENABLED"] = "false"
 reload_module(drupal)  # pylint: disable=too-many-function-args
-
 
 CLEAR_CACHE_RESPONSE_WAITING = {
     "id": "1",
@@ -166,6 +165,7 @@ class TestDrupal(unittest.TestCase):
     """
     Class containing tests of all code interacting with Drupal.
     """
+
     def test_check_state_waiting(self, mock):
         """
         Tests check_state raises BackendError because the state field is "waiting"
